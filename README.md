@@ -1,2 +1,3 @@
 # digitalocean-dynamic-dns
-Update DNS for domain dynamically 
+
+Update your Digital Ocean DNS records for a domain dynamically 
