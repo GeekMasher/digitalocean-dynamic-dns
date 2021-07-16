@@ -1,0 +1,38 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "pipenv",
+            "args": [
+                "run",
+                "python",
+                "do-dynamic-dns.py",
+                "--domain",
+                "${input:domain}",
+                "--name",
+                "${input:domainName}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "domain",
+            "description": "Domain",
+            "type": "promptString"
+        },
+        {
+            "id": "domainName",
+            "description": "Domain Name",
+            "type": "promptString"
+        }
+    ]
+}

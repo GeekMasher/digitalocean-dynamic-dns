@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "github.copilot.enable": {
+        "*": true
+    },
+    "github.copilot.advanced": {
+        "autoFormat": true,
+    }
+}
