@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.11
 
 LABEL Maintainer="GeekMasher"
 
@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY . /app
 
-# Install and setup cron/crontab + set permisions
+# Install and setup cron/crontab + set permissions
 RUN apt-get update -y && \
     apt-get install -y cron && \
     chmod +x /app/entrypoint.sh /app/do-dynamic-dns.py
